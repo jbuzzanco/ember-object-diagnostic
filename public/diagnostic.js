@@ -8,6 +8,16 @@
 //  -  a quantity
 //  -  a computed property called `orderPrice`, equal to price times quantity
 //
+
+const Order = Ember.Order.extend({
+  unitPrice: 'price',
+  quantity: [],
+  orderPrice: (unitPrice, quantity, function(){
+    unitPrice * quantity;
+    }
+});
+export default Order;
+
 // A Cart should have
 //  -  an `addToCart` method, which adds a given Item to an array
 //      called `orders` (HINT: You'll probably need to look through the
